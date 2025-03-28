@@ -1,7 +1,12 @@
 import "./App.css";
+import Header from "./sections/Header";
 
 function App() {
-  return <p className="text-3xl text-red-800">Hello World</p>;
+  return (
+    <main className="overflow-hidden">
+      <Header />
+    </main>
+  );
 }
 
 export default App;

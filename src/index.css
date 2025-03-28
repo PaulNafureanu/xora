@@ -1,1 +1,233 @@
 @import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #080d27; /* fallback for theme('colors.s1') */
+  }
+
+  body {
+    font-family: "Poppins", sans-serif; /* fallback for theme('fontFamily.poppins') */
+    color: #c4cbf5; /* fallback for theme('colors.p5') */
+    font-size: 16px;
+    letter-spacing: -0.03em;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    background-color: transparent;
+    letter-spacing: -0.03em;
+  }
+
+  input {
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  /* START of Typography */
+  .h-num {
+    font-family: "Inter", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 84px;
+  }
+
+  .h1 {
+    font-size: 84px;
+    font-weight: 900;
+    line-height: 84px;
+    letter-spacing: -0.03em;
+  }
+
+  .h2 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 64px;
+  }
+
+  .h3 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+  }
+
+  .h4 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 52px;
+  }
+
+  .h5 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .h6 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+  }
+
+  .body-1 {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .body-2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  .body-3 {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+
+  .base {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .base-bold {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .base-small {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .small-1 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .small-2 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.3em;
+  }
+
+  .small-compact {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* START of Gradients */
+.g1 {
+  background: linear-gradient(rgba(196, 203, 245, 0.5), transparent);
+}
+
+.g2 {
+  background: linear-gradient(#3062a3, #19549f);
+}
+
+.g3 {
+  background: linear-gradient(#3c52d9, #0c1838);
+}
+
+.g4 {
+  background: linear-gradient(#253575, #162561);
+}
+
+.g5 {
+  background: linear-gradient(#334679, #162561);
+}
+
+.g6 {
+  background: linear-gradient(#334679, #0c1838);
+}
+
+.g7 {
+  background: linear-gradient(#1b275a, #0e1434);
+}
+
+.g8 {
+  background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+}
+
+.g9 {
+  background: linear-gradient(#080d27, transparent);
+}
+/* END of Gradients */
+
+/* START of Common */
+.container {
+  @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+}
+
+.caption {
+  @apply mb-5 uppercase;
+  color: #c8ea80; /* theme('colors.p3') */
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.3em;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* END of Common */
+
+/* START of Header */
+.nav-active {
+  color: #c8ea80; /* theme('colors.p3') */
+}
+
+.nav-li {
+  @apply relative flex flex-1 items-center justify-between max-lg:flex-col max-lg:items-start;
+}
+
+.nav-logo {
+  @apply relative flex flex-1 items-center justify-center;
+}
+
+.dot {
+  @apply size-1.5 rounded-full max-lg:hidden;
+  background-color: #3c52d9; /* theme('colors.p2') */
+}
+
+.sidebar-before::before {
+  content: "";
+  position: absolute;
+  right: -16rem;
+  top: 40%;
+  height: 440px;
+  width: 252px;
+  background-color: #1959ad; /* theme('colors.s4') */
+  filter: blur(200px);
+}
+/* END of Header */
